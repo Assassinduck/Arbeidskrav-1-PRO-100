@@ -8,6 +8,7 @@ as well as to test how well the students were able to work in teams and coordina
 
 
 Credit to the programmers who worked on this project in alphabetic order:
+
 Julian Pettersen (Me)
 
 Kristoffer Opdahl
