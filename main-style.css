@@ -1,0 +1,759 @@
+body{
+    background-color:rgb(0, 25, 50);
+}
+
+h1{
+    position: absolute;
+    margin: 50px;
+    left: 440px;
+    top: 100px;
+    font-size: 40px;
+    font-family: cursive; 
+    color: rgb(253, 98, 37);
+    text-shadow:  0px 5px 100px rgb(216, 32, 32), 0px 5px 100px rgb(216, 32, 32),  0px 5px 50px rgb(216, 32, 32);
+    transition: all 4s linear;
+    z-index: 50;
+    right: 100px;
+    animation-duration: 10s;
+    animation-name: h1Slide;
+}
+
+#underText{
+    position: absolute; 
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: 10s;
+    animation-name: flash;
+}
+
+#slidein {
+    position: absolute;
+    margin: 50px;
+    left: 240px;
+    top: 500px;
+    font-size: 40px;
+    font-family: cursive; 
+    color: rgb(253, 98, 37);
+    text-shadow:  0px 5px 100px rgb(216, 32, 32), 0px 5px 100px rgb(216, 32, 32),  0px 5px 50px rgb(216, 32, 32);
+    transition: all 4s linear;
+    z-index: 50;
+    right: 50px;
+    animation-duration: 9s;
+    animation-name: under-text;
+    animation-timing-function: ease-out;
+}
+
+#animContainer{
+    min-width: 1000px;
+    max-width: 1200px;
+    height: 3000px;
+    margin: auto;
+    background-image: radial-gradient(circle, rgb(94, 84, 84), rgb(65, 8, 80), rgb(26, 24, 24));
+    position: relative;
+    overflow: hidden;
+}
+
+#animContainer *{
+    position: absolute;
+}
+
+#lightning{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 30;
+    animation-name: lightningFlash;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
+    animation-duration: 30s;
+    animation-delay: 10s; 
+}
+
+
+#devilEmblem{
+    display: block;
+    top: 150px;
+    left: 440px;
+    width: 300px;
+    transition: all 3s linear;
+}
+
+#animContainer:hover #devilEmblem{
+    opacity: 0;
+    width: 1000px;
+    top: 0%;
+    transform: translateX(-50%);
+}
+
+
+#glowMoon{
+    width: 150px;
+    height: 150px;
+    background-image: linear-gradient(rgb(133, 116, 110),rgb(194, 169, 100));
+    border-radius: 50%;
+    left:150px;
+    top:100px;
+    box-shadow: 0px 1px 500px rgb(117, 103, 37), 0px 0px 500px rgb(254, 193, 116);
+    transition-duration: 10s;
+    transition-timing-function: ease-in-out;
+    transition-property: all;
+    z-index: 40;
+}
+
+#glowMoon:hover{
+    background-image: linear-gradient(rgb(163, 53, 13),rgb(168, 154, 96));
+    left:500px;
+    top:200px;
+}
+
+#glowMoon:hover .hiddenSkull{
+    width: 550px;
+    transition-delay: 10s;
+    opacity: 1;
+}
+
+.hiddenSkull{
+    width:10px;
+    left: -250px;
+    top: -150px;
+    opacity: 0;
+}
+
+
+/********************
+*********************
+*********************
+Castle
+*********************
+*********************
+********************/
+
+#frankenstein1{
+    bottom: 0;
+    left:100px;
+    width: 400px;
+    opacity: 0;
+    transition:0.7s ease-out;
+    animation-duration: 1s;
+    z-index: 40;
+}
+
+#castle1 {
+    left:350px;
+    bottom: 0;
+    width: 500px;
+    opacity: 0.5;
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+#animCastle{
+    bottom:0;
+    width: 600px;
+    left:300px;
+    height:500px;
+}
+
+#animCastle:hover #frankenstein1{
+    width: 500px;
+    bottom: 0;
+    left:45px;
+    animation-name: frankMoves;
+}
+
+ /********************
+*********************
+*********************
+Tombstone
+*********************
+*********************
+********************/
+
+ #tombstone{
+    width:60px;
+    height: 70px;
+    bottom: 0;
+    right: 130px;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+}
+
+#stone{
+    background-color: rgb(75, 75, 75);
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    height: 60px;
+    width: 45px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+#crossH{
+    background-color: white;
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    width: 6px;
+    height: 30px;
+    bottom: 15px;
+    right: 19px;
+}
+
+#crossV{
+    background-color: white;
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    width:30px;
+    height: 6px;
+    bottom: 30px;
+    right: 7px;
+}
+
+#flashZombie1{
+    width: 50px;
+    bottom: 0;
+    right: 5px;
+    opacity: 0;
+    animation-duration: 1s;
+    z-index: 40;
+}
+
+#tombstone:hover .flashZombie{
+    transform: scale(100%);
+    animation-name: tombstoneHorror;
+}
+  
+/********************
+*********************
+*********************
+ghosts
+*********************
+*********************
+********************/
+
+
+.ghost{
+    position: absolute;
+    width: 50px;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#ghost1{
+    top:50px;
+    right: 50px;
+    animation-duration: 16s;
+    animation-name: ghostMoves;
+}
+
+#ghost2{
+    right: 50px;
+    animation-duration: 13s;
+    animation-name: ghostMoves;
+    top:200px;
+    opacity: 0.1;
+    transition-property: all;
+    transition-duration: 10s;
+    transition-timing-function: linear;
+    transition-delay: 3s;
+}
+
+#ghost3{
+    left: -50px;
+    animation-duration: 12s;
+    transform: rotateY(180deg);
+    animation-name: ghostMovesLeft;
+}
+/********************
+*********************
+*********************
+Zombie
+*********************
+*********************
+********************/
+
+
+.zombie{
+    height: 60px;
+    width: 60px;
+    bottom: 0;
+}
+#zombie1{
+    animation-name:zombie1walk;
+    animation-duration: 20s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+}
+#zombie2{
+    left: 560px;
+    animation-name: zombie2walk;
+    animation-duration: 20s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+#zombie3{
+    left: 50px;
+    animation-name: zombie3walk;
+    animation-duration: 20s;
+    animation-delay: 0;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+/********************
+*********************
+*********************
+Moon
+*********************
+*********************
+********************/
+
+#moon{
+    background-color:rgb(189, 165, 127);
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    bottom: 500px;
+    right: 50px;;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition-property: all;
+    transition: all 3s linear;
+    z-index: 40;
+}
+
+#horseman {
+    display: block;
+    width: 200px;
+    height: 150px;
+    top: 200px;
+    right: 100px;
+}
+
+#moon:hover{
+    background: rgb(155, 23, 0);
+    width:400px;
+    height:400px;
+    bottom: 500px;
+    right: 10px;
+    box-shadow: 0px 0px 1000px rgb(224, 171, 11);
+}
+
+
+/********************
+*********************
+*********************
+pumpkins
+*********************
+*********************
+********************/
+
+
+.pumpkin{
+    top:5100px;
+    width: 50px;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    animation-name: pumpkinFall;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+#pumpkin1 {
+     left: 80px;
+}
+
+#pumpkin2 {
+    left: 40px;
+    animation-delay: 10s;
+}
+
+#pumpkin3 {
+    right: 80px;
+    animation-delay: 5s;
+}
+
+#pumpkin4 {
+    right: 40px;
+    animation-delay: 15s;
+}
+
+/********************
+*********************
+*********************
+Clouds
+*********************
+*********************
+********************/
+
+/*In CSS, :after and :before cheat's a pseudo-element "child/clone" so we dont need to make more div-boxes to follow each other*/
+
+.cloud{
+    display:inline-block;
+    background:rgb(185, 177, 177);
+    border-radius:50%;
+    position:relative;
+    filter: blur(6px);
+    z-index:11;
+    animation-name: cloudAnimation;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    opacity: 0.3;
+}
+
+.cloud:before{
+    content:"";
+    display:inline-block;
+    background:rgb(185, 177, 177);
+    filter: blur(3px);
+    position:relative;
+    border-radius:50%;
+}
+
+.cloud:after{
+    content:"";
+    display:inline-block;
+    background:rgb(185, 177, 177);
+    filter: blur(3px);
+    position:relative;
+    border-radius:50%;    
+}
+
+#cloud1{
+    width:120px;
+    height:120px;
+    bottom: 450px;
+    left:-300px;
+    animation-duration: 30s;
+    transition-duration: 10s;
+}
+
+#cloud1:before{
+    width:100px;
+    height:100px; 
+    top:-30px;
+    left: 60px;
+}
+
+#cloud1:after{
+    width:200px;
+    height:100px;
+    top:-80px;
+    left:70px;
+}
+
+#cloud2{
+    width:120px;
+    height:120px;
+    bottom: 350px;
+    right:-30px;
+    animation-name: cloudAnimationLeft;
+    animation-duration: 24s;
+}
+
+#cloud2:before{
+    width:100px;
+    height:100px; 
+    top:-30px;
+    left:60px;
+}
+
+#cloud2:after{
+    width:200px;
+    height:100px;
+    top:-80px;
+    left:70px;
+}
+
+#cloud3{
+    width:120px;
+    height:120px;
+    bottom: 260px;
+    left:-300px;
+    animation-duration: 20s;
+    animation-delay: 3s;
+    opacity: 0.1;
+}
+
+#cloud3:before{
+    width:100px;
+    height:100px; 
+    top:-30px;
+    left:60px;
+}
+
+#cloud3:after{
+    width:200px;
+    height:100px;
+    top:-80px;
+    left:70px;
+}
+
+#cloud4{
+    width:30px;
+    height:35px;
+    bottom: 500px;
+    right: 100px;
+    animation-name: cloudAnimationMoon;
+    animation-timing-function: ease;
+    animation-duration: 30s; 
+}
+
+#cloud4:before{
+    width:50px;
+    height:40px; 
+    top:-15px;
+    left:20px;
+}
+
+#cloud4:after{
+    width:90px;
+    height:50px;
+    top:-40px;
+    left:20px;
+}
+
+/********************
+*********************
+*********************
+Keyframs
+*********************
+*********************
+********************/
+
+@keyframes h1Slide{
+    0%{
+        top:-150px;
+    
+    }50%{
+        transform: rotateY(1080deg);
+    }100%{
+        top:100px;
+    }
+}
+
+@keyframes flash{
+    0%{
+        font-size: 40px;
+        color: aliceblue;
+    }50%{
+        font-size: 50px;
+        color: rgb(253, 98, 37);
+    }100%{
+        font-size: 40px;
+        color:aliceblue;
+    }
+}
+
+@keyframes under-text{
+    0%{
+        left: -650px;
+    }90%{
+        left: -650px;
+
+    }100%{
+        left:240px;
+        opacity: 1;
+    }
+}
+
+@keyframes ghostMoves {
+    0%{
+        right: -50px;
+        opacity: 0.1;
+    }100%{
+        right: 1200px;
+        opacity: 1;
+    }
+}
+
+@keyframes ghostMovesLeft {
+    0%{
+        left: -50px;
+        opacity: 0.1;
+    }50%{
+        opacity: 0.9;
+    }55%{
+        opacity: 0.2;
+    }100%{
+        left: 1200px;
+    }
+}
+
+@keyframes frankMoves {
+    0%{
+        opacity: 1;
+    }100%{
+        opacity: 0;
+    }
+}
+
+@keyframes pumpkinFall {
+    0%{
+        top: -50px;
+    }10%{
+        opacity: 0.2;
+    }50%{
+        opacity: 1;
+    }
+    100%{
+        bottom: 500px;
+        opacity: 0;
+    }
+}
+
+@keyframes cloudAnimation {
+    0%{
+    left:-300px;
+    }100%{
+    left: 1200px;
+    }
+}
+
+@keyframes cloudAnimationLeft {
+    0%{
+      right: -300px;
+    }100%{
+      right: 1320px;
+    }
+}
+
+@keyframes cloudAnimationMoon {
+    0%{
+      right: 100px;
+      bottom: 500px;
+    }25%{
+        right: 200px;
+        bottom: 480px;
+        opacity: 0.1;
+    }50%{
+      right: 130px;
+    }75%{
+        right: 250px;
+        bottom:515px;
+        opacity: 0.2;
+    }100%{
+        right: 100px;
+       }
+}
+
+@keyframes tombstoneHorror{
+    0%{
+        opacity: 1;
+        width: 0px;
+        right: 15px;
+    }10%{    
+       transform: scale(0.5);
+       width: 100%;
+    }20%{
+        transform: scale(1);
+    }30%{
+        transform: scale(0.5);
+    }40%{
+        transform: scale(1);
+    }50%{
+        opacity: 0;
+    }60%{
+        opacity: 1;
+    }70%{
+        opacity: 0;
+    }80%{
+        opacity: 1;
+    }90%{
+        opacity: 0;
+    }100%{
+        opacity: 0;
+    }
+}
+
+@keyframes lightningFlash {
+    0%{
+        opacity: 0;
+    }19.8%{    
+        opacity: 0;
+    }20%{
+        opacity: 1;
+    }20.2%{
+        opacity: 0;
+    }49.8%{
+        opacity: 0;
+    }50%{
+        opacity: 1;
+    }50.2%{
+        opacity: 0;
+    }54.8%{
+        opacity: 0;
+    }55%{
+        opacity: 1;
+    }55.2%{
+        opacity: 0;
+    }89.8%{
+        opacity: 0;
+    }90%{
+        opacity: 1;
+    }90.2%{
+        opacity: 0;
+    }100%{
+        opacity: 0;
+    }
+}
+
+@keyframes zombie1walk{
+    0%{
+        right: 50px;
+    }49%{ 
+       transform: rotateY(0deg);
+	}50%{
+        transform: rotateY(180deg);
+        right: 1150px;
+	}99%{
+        transform: rotateY(180deg);
+
+    }100%{
+        transform: rotateY(180deg);
+        right: 50px;
+    }
+}
+
+@keyframes zombie2walk{
+    0%{
+       left: 585px;
+       width: 0px;
+       height: 0px;
+    }20%{
+        left:585px;
+        width: 60px;
+        height:60px;
+    
+    }49%{
+        transform: rotate(0);
+    }50%{
+        left: 50px;
+        transform: rotateY(180deg);
+        
+    }80%{
+        left: 585px;
+        width: 60px;
+        height: 60px;
+    }100%{
+        left:600px;
+        width: 0px;
+        height: 0px;
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes zombie3walk{
+    0%{
+        left: 50px;
+        transform: rotateY(180deg);
+    }49%{ 
+       transform: rotateY(180deg);
+	}50%{
+        transform: rotateY(0deg);
+        left: 1150px
+    }100%{
+        left: 50px;
+        transform: rotateY(0deg);
+    }
+}

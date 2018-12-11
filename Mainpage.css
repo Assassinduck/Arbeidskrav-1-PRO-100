@@ -1,0 +1,444 @@
+body{
+background-color:rgba(37,13,110,1);
+margin: 0;
+}
+
+#mainPageContainer{
+    
+    background: linear-gradient(to bottom, rgba(38,15,128,1) 0%, rgba(44,5,46,1) 0%, rgba(37,13,110,1) 100%)no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#260f80', endColorstr='#250d6e', GradientType=0 );
+    height: 1100px;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#grass{
+    height: 100px;
+    width:100%;
+     background-color:green;
+     position: absolute;
+     z-index: 100;
+     bottom: 0;
+}
+ 
+ #backgroundtext {
+     color:orange;
+     text-shadow: 0px 0px 50px rgb(245, 165, 4),0px 0px 50px rgb(245, 165, 4);
+     left: 850px;
+     top: 10px;
+     font-weight: bold;
+     font-size: 80px;
+     position: absolute;
+     z-index: 10;
+     width: 300px;
+     font-family: 'Courier New', Courier, monospace;
+}
+ 
+ #images img{
+     position: absolute;
+     border:0;
+}
+
+#button{
+    height: 250px; 
+    position: absolute;
+    bottom:370px;
+    left: 880px;
+}
+
+#button:hover{
+    height: 350px;
+}
+
+/********************
+*********************
+*********************
+speech bubble
+*********************
+*********************
+********************/
+.speechBubble {
+    background-color: #d87417;
+    border-radius: 5px;
+    width: 110px;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    left: 700px;
+    bottom: 300px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.speechBubble .arrow {
+    border-style: solid;
+    position: absolute;
+}
+ 
+.bottom {
+    border-color:  #d87417 transparent transparent transparent;
+    border-width: 10px 8px 110px 2px;
+    right: -8px;
+}
+
+.bottom:after {
+    border-color:  #d87417 transparent transparent transparent;
+    border-style: solid;
+    border-width: 10px 8px 5px 0px;
+    bottom: -5px;
+    content: "";
+    position: absolute;
+    right: -8px;
+}
+
+/********************
+*********************
+*********************
+Witch
+*********************
+*********************
+********************/
+
+.witch{
+    position:absolute;
+    width: 70px;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+}
+
+#witch1{
+    top: 400px;
+    animation-name: flyingWitch1;
+    animation-duration: 12s;
+}
+
+#witch2{
+    bottom:500px;
+    right: 600px;
+    animation-name: flyingWitch2;
+    animation-duration: 20s;
+    animation-delay: 0.5s;
+}
+
+#witch3{
+    top:60px;
+    left: 200px;
+    animation-name: flyingWitch3;
+    animation-duration: 10s;
+}
+
+#witch4{
+    left: 100px;
+    animation-name: flyingWitch4;
+    animation-duration: 15s;
+    animation-delay: 0.7s;
+}
+
+/********************
+*********************
+*********************
+Pumpkins
+*********************
+*********************
+********************/
+
+.pumpkin{
+    height: 50px;
+    width: 130px;
+    margin: 0px;
+    bottom: 65px;
+    z-index: 1000;
+    padding:0px;
+    
+}
+
+#pumpkin1{  
+    left: 100px;
+}
+
+#pumpkin2{  
+    left: 450px;
+}
+
+#pumpkin3{  
+    left: 800px;
+}
+
+#pumpkin4{  
+    left: 1100px;
+}
+
+#pumpkin5{  
+    left: 1450px;
+}
+
+#pumpkin6{  
+    left: 1700px;
+}
+
+/********************
+*********************
+*********************
+Ghosts
+*********************
+*********************
+********************/
+
+.ghost{
+ bottom: 50px;
+ left:1px;
+ width:100px;
+ height: 100px;
+ position: absolute;
+ opacity: 0;
+ transition:0.7s ease-out;
+ animation-duration: 10s;
+ z-index: 999999;
+}
+
+#ghost1{
+    left: 298px;
+}
+
+#ghost2{
+    left: 645px;
+}
+
+#ghost3{
+    left: 972px;
+}
+
+#ghost4{
+    left: 1290px;
+}
+
+#ghost5{
+    left: 1590px;
+}
+
+/********************
+*********************
+*********************
+Tombstone
+*********************
+*********************
+********************/
+
+#tombstoneid:hover .ghost{
+    bottom: 50px;
+    width: 100px;   
+    height:100px;
+    
+    animation-name: fly;
+}
+
+#button{
+    height: 250px; 
+    position: absolute;
+    bottom:370px;
+    left: 880px;
+}
+
+#button:hover{
+    height: 350px;
+}
+
+#tombstoneid .tombstone{
+    position: absolute;
+}
+
+.tombstone{
+    background-color: grey;
+    height: 120px;
+    width: 100px;
+    bottom: 70px;
+    z-index: 1000;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+
+}
+
+#tombstoneid #tombsstone1{
+    left:295px; 
+}
+
+#tombstoneid #tombsstone2{
+    left:645px;
+}
+
+#tombstoneid #tombsstone3{
+    left:968px;
+    
+}
+
+#tombstoneid #tombsstone4{
+    left:1290px;
+    
+}
+
+#tombstoneid #tombsstone5{
+    left:1590px;  
+}
+
+#Crossone .crossdel1{
+    position: absolute;
+}
+
+.crossdel1{
+    background-color: rgb(219, 219, 219);
+    width:45px;
+    height:10px;
+    bottom:125px;
+    z-index: 1200;
+}
+
+#crossone1{
+    left:324px;
+}
+
+#crossone2{
+    left:672px;
+}
+
+#crossone3{
+    left:996px;
+}
+
+#crossone4{
+    left:1318px;
+}
+
+#crossone5{
+    left:1615px;
+}
+
+#Crosstwo .crossdel2{
+    position: absolute;
+}
+
+.crossdel2{
+    background-color: rgb(219, 219, 219);
+    width:10px;
+    height:50px;
+    bottom:100px;
+    z-index: 1200;
+}
+
+#crosstwo1{
+    left:342px;
+}
+
+#crosstwo2{
+    left:689px;
+}
+
+#crosstwo3{
+    left:1014px;
+}
+
+#crosstwo4{
+    left:1336px;
+}
+
+#crosstwo5{
+    left:1633px;
+}
+
+/********************
+*********************
+*********************
+Keyframes
+*********************
+*********************
+********************/
+
+@keyframes flyingWitch1 {
+    0%{
+        left: -150px;
+        opacity: 0.5;
+    }50%{
+        left: 2000px;
+        opacity: 1;
+        transform: rotateY(0deg);
+    
+    }51%{
+        transform: rotateY(180deg);
+    }100%{
+        transform: rotateY(180deg);
+        left: -150px;
+        opacity: 0.5;
+    }
+}
+
+@keyframes flyingWitch2 {
+    0%{
+        left: -150px;
+        opacity: 0.5;
+    }50%{
+        left: 2000px;
+        opacity: 1;
+        transform: rotateY(0deg);
+    
+    }51%{
+        transform: rotateY(180deg);
+    }100%{
+        transform: rotateY(180deg);
+        left: -150px;
+        opacity: 0.5;
+    }
+}
+
+@keyframes flyingWitch3 {
+    0%{
+        left: -150px;
+        opacity: 0.5;
+    }50%{
+        left: 2000px;
+        opacity: 1;
+        transform: rotateY(0deg);
+    
+    }51%{
+        transform: rotateY(180deg);
+    }100%{
+        transform: rotateY(180deg);
+        left: -150px;
+        opacity: 0.5;
+    }
+}
+
+@keyframes flyingWitch4 {
+    0%{
+        left: -150px;
+        opacity: 0.5;
+    }50%{
+        left: 2000px;
+        opacity: 1;
+        transform: rotateY(0deg);
+    
+    }51%{
+        transform: rotateY(180deg);
+    }100%{
+        transform: rotateY(180deg);
+        left: -150px;
+        opacity: 0.5;
+    }
+}
+
+@keyframes fly{
+    0%{
+        bottom: 50px;
+        opacity: 1;
+    }50%{
+        opacity: 0.6;
+    }80%{
+        left:950px;
+        opacity: 0.2;
+    }100%{
+        bottom: 450px;
+        opacity: 0;
+    }
+}
