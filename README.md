@@ -1,5 +1,5 @@
 # Arbeidskrav-1-PRO-100
-# An halloween group project based on showing off animation skills
+# A Halloween-themed group project where the point was showing off animation skills
 
 The first group project i worked on. 
 This group projects end goal was to test and showcase the students accumilated animation skills using CSS and HTML,
